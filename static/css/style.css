@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+textarea,
+select,
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px;
+    background-color: #f5f5f5;
+    color: #000;
+    padding: 20px;
+}
+.chat-presentation-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.logo-img {
+    width: 24px;
+    height: 24px;
+}
+.credit-p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#chat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.chat-list-item:hover {
+    background-color: grey;
+    color: #fff;
+}
+
+.chat-list-item-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.chat-list-item-delete {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.new-chat-button {
+    margin: 0 0 20px 0!important;
+    background-color: rgb(66, 133, 244);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.token-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(32, 33, 35);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.token-label {
+    margin-bottom: 10px;
+}
+
+.token-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.token-label a {
+    color: #fff;
+}
+
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+.scroll-container {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    max-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 12px;
+    box-sizing: border-box;
+}
+.scroll-container:last-child {
+    margin-bottom: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    padding: 20px;
+    max-width: 48em;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.message-user{
+    display: flex;
+    background-color: #f5f5f5;
+    align-self: flex-end;
+    padding: 12px;
+    border-radius: 16px;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+.message-assistant{
+    display: flex;
+    align-self: flex-start;
+    padding: 12px;
+    border-radius: 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.message-content {
+    flex: 1;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    white-space: normal;
+}
+
+.message .message-content p {
+    margin: 0;
+}
+
+.message .message-checkbox {
+    margin-right: auto;
+}
+
+.prompt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px 8px 20px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.prompt #input {
+    flex: 1;
+}
+
+#send-request-button {
+    background-color: rgb(66, 133, 244);
+}
+
+
+.button {
+    margin-left: 24px;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button[disabled] {
+    background-color: rgb(200, 200, 200);
+    cursor: not-allowed;
+}
+
+.clickable:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 3px 3px rgba(0, 128, 255, 0.2);
+}
+
+.clickable:active {
+    opacity: 0.6;
+}
+
+.icon {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    font-size: 150%;
+    padding: 0;
+    border-radius: 16px;
+}
+
+.icon:not(:first-of-type) {
+    margin-left: 12px;
+}
+
+
+#properties-panel {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#properties-panel > div {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#properties-panel.hidden {
+    display: none;
+}
+
+#welcome-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-panel.hidden {
+    display: none;
+}
+
+
+#welcome-panel h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+#welcome-panel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    align-self: flex-start;
+}
+
+#welcome-panel ul {
+    margin-bottom: 0;
+}
+
+#welcome-panel li {
+    margin-bottom: 8px;
+}
+#welcome-panel li span {
+    font-style: italic;
+}
+
+.code {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.syntax-bracket {
+    color: blue;
+}
+
+.syntax-quote {
+    color: green;
+}
+
+.syntax-operator {
+    color: red;
+}
+
+.syntax-symbol {
+    color: purple;
+}
